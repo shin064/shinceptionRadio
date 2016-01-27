@@ -19,31 +19,29 @@
 		<h2> Playing Now: </h2>
 		<h3 id='nowShow'></h3>
 		<p id='now'></p>
-		</br>
-		<audio controls autoplay></audio> </br>
-		<button ng-disabled='!enableNext()' class='btn btn-success btn-lg' type='button' id='next'>Next</button>
 	</div>
-
-	<hr>
 
 	<div class='text-center'>
 		<h2> Active Shows:</h2>
 		<button ng-disabled='!enableAdd()' class='btn btn-primary btn-lg' type='button' ng-click='pick()'>Add for me</button>
 		<button ng-disabled='!enableClear()' class='btn btn-danger btn-lg' type='button' ng-click='removeAll()'>Clear</button>
 		</br>
-		<span ng-repeat="show in selected" ng-click="toggleSelect(show)" ng-animate=" 'animate' ">
+		<div ng-repeat="show in selected" ng-click="toggleSelect(show)" ng-animate=" 'animate' " class="show-container">
 			<img src='{{show.imageUrl}}' class='icon'>
-		</span>
+		</div>
 	</div>
-
-	<hr>
 
 	<div class='text-center'>
 		<h2> Inactive Shows: (Click to Activate) </h2>
 		<div><input class="input-lg" placeholder="Search" ng-model="searchKey" /></div>
-		<span ng-repeat="show in unselected | filter:searchKey" ng-click="toggleSelect(show)">
+		<div ng-repeat="show in unselected | filter:searchKey" ng-click="toggleSelect(show)" class="show-container">
 			<img src='{{show.imageUrl}}' class='icon'>
-		</span>
+		</div>
+	</div>
+
+	<div class="player-interface">
+		<audio controls autoplay></audio> </br>
+		<button ng-disabled='!enableNext()' class='btn btn-success btn-lg' type='button' id='next'>Next</button>
 	</div>
 </div>
 
