@@ -203,6 +203,17 @@
 }
 
 /*
+*   container needed for large-size layout
+*/
+.active-buttons-container {
+  @include bp(knight) {
+    float: right;
+    position: relative;
+    top: 8px;
+  }
+}
+
+/*
 *   Funky button moving workaround on active state
 */
 

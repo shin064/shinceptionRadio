@@ -1,16 +1,13 @@
 /* 
-    =============================================
+    ================================================================
     Vars 
-    =============================================
+    ================================================================
 */
 /*  
-    =============================================
+    ================================================================
     Styles 
-    =============================================
+    ================================================================
 */
-.clear {
-  clear: both; }
-
 .animate-enter,
 .animate-leave {
   -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
@@ -33,11 +30,9 @@
   top: -50px;
   height: 0px; }
 
-/*
-*
-*   Kan's styles
-*
-*/
+.clear {
+  clear: both; }
+
 body {
   background-color: #efefef;
   padding: 0px 0px 215px 0px;
@@ -69,6 +64,11 @@ h5 {
 h6 {
   font-size: 12px; }
 
+/*
+*   ================================================================
+*   Header & Footer Logo
+*
+*/
 .site-title {
   top: 0px;
   left: 0px;
@@ -93,14 +93,15 @@ h6 {
         height: 55px;
         line-height: 55px; } }
 
-/* footer site logo */
 .site-logo h4 {
   color: #bbb;
   text-align: center;
   margin: 30px 0; }
 
 /* 
-*   player interface
+*   ================================================================
+*   player interface (audio controls, next, etc.)
+*
 */
 .player-interface {
   position: fixed;
@@ -134,43 +135,53 @@ h6 {
     @media (min-width: 768px) {
       .player-interface p {
         font-size: 16px; } }
-  @media (min-width: 768px) {
-    .player-interface .player-controls {
-      position: relative;
-      margin: auto;
-      width: 680px; } }
-  .player-interface .track-title {
-    margin: 8px 0 5px 0;
-    line-height: 1.3em; }
-    @media (min-width: 768px) {
-      .player-interface .track-title {
-        margin-top: 0; } }
-  .player-interface .show-title {
-    font-style: italic;
-    color: #919191; }
-  .player-interface audio {
-    width: 100%;
-    max-width: 680px;
-    display: inline-block; }
-  .player-interface .toggle-player {
-    position: absolute;
-    top: -25px;
-    left: 0px;
-    height: 25px;
-    width: 100%;
-    background-color: #333333;
-    cursor: pointer; }
-    .player-interface .toggle-player span {
-      display: inline-block;
-      line-height: 25px;
-      transform: rotate(90deg); }
-  @media (min-width: 768px) {
-    .player-interface .toggle-player:hover {
-      background-color: #444; } }
-  .player-interface .toggle-player-on span {
-    transform: rotate(-90deg); }
 
-/* shows */
+@media (min-width: 768px) {
+  .player-controls {
+    position: relative;
+    margin: auto;
+    width: 680px; } }
+
+.track-title {
+  margin: 8px 0 5px 0;
+  line-height: 1.3em; }
+  @media (min-width: 768px) {
+    .track-title {
+      margin-top: 0; } }
+
+.show-title {
+  font-style: italic;
+  color: #919191; }
+
+audio {
+  width: 100%;
+  max-width: 680px;
+  display: inline-block; }
+
+.toggle-player {
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  height: 25px;
+  width: 100%;
+  background-color: #333333;
+  cursor: pointer; }
+  .toggle-player span {
+    display: inline-block;
+    line-height: 25px;
+    transform: rotate(90deg); }
+
+@media (min-width: 768px) {
+  .toggle-player:hover {
+    background-color: #444; } }
+.toggle-player-on span {
+  transform: rotate(-90deg); }
+
+/*
+*   ================================================================
+*   Active & Inactive show Sections
+*
+*/
 .show-wrapper {
   padding: 10px 20px;
   text-align: center; }
@@ -191,6 +202,9 @@ h6 {
     .show-wrapper h3 {
       font-size: 24px; } }
 
+/*  ================================
+*   Active Shows
+*/
 .active-shows {
   background-color: #fff;
   min-height: 100px; }
@@ -202,12 +216,10 @@ h6 {
     @media (min-width: 768px) {
       .active-shows h3 {
         float: left; } }
-  @media (min-width: 768px) {
-    .active-shows .active-buttons-container {
-      float: right;
-      position: relative;
-      top: 8px; } }
 
+/*  ================================
+*   Inactive Shows
+*/
 .inactive-shows h3 {
   margin: 10px 0px; }
   @media (min-width: 768px) {
@@ -224,11 +236,19 @@ h6 {
       position: relative;
       bottom: 2px; } }
 
+/*  ================================
+*   Show Images
+*/
 .show-container {
   display: inline-block;
   background-color: #fff;
   border: 1px solid #e3e3e3;
-  margin: 5px 3px; }
+  margin: 5px 3px;
+  border-radius: 3px; }
+
+@media (min-width: 960px) {
+  .show-container:hover {
+    border: 1px solid #b2b2b2; } }
 
 .icon {
   height: 70px;
@@ -398,6 +418,15 @@ h6 {
 .input-search:-moz-placeholder {
   /* Firefox 18- */
   color: #ccc; }
+
+/*
+*   container needed for large-size layout
+*/
+@media (min-width: 768px) {
+  .active-buttons-container {
+    float: right;
+    position: relative;
+    top: 8px; } }
 
 /*
 *   Funky button moving workaround on active state

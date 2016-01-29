@@ -1,7 +1,7 @@
 /* 
-    =============================================
+    ================================================================
     Vars 
-    =============================================
+    ================================================================
 */
 
 $d-dark-gray : #242424;
@@ -11,21 +11,14 @@ $blue : #0C71B0;
 $light-blue : #A8D3ED;
 $vm-sm : 10px;
 $vm-md : 20px;
-$vm-lg : 35px;
 
 $player-width: 680px;
 
-
-
 /*  
-    =============================================
+    ================================================================
     Styles 
-    =============================================
+    ================================================================
 */
-
-.clear {
-  clear: both;
-}
 
 .animate-enter, 
 .animate-leave
@@ -53,11 +46,9 @@ $player-width: 680px;
   height: 0px;
 }
 
-/*
-*
-*   Kan's styles
-*
-*/
+.clear {
+  clear: both;
+}
 
 body {
   background-color: #efefef;
@@ -99,6 +90,11 @@ h6 {
   font-size: 12px;
 }
 
+/*
+*   ================================================================
+*   Header & Footer Logo
+*
+*/
 .site-title {
   top: 0px;
   left: 0px;
@@ -128,7 +124,7 @@ h6 {
   }
 }
 
-/* footer site logo */
+// footer site logo
 .site-logo {
 
   h4 {
@@ -139,7 +135,9 @@ h6 {
 }
 
 /* 
-*   player interface
+*   ================================================================
+*   player interface (audio controls, next, etc.)
+*
 */
 .player-interface {
   position: fixed;
@@ -183,63 +181,67 @@ h6 {
       font-size: 16px;
     }
   }
+}
 
-  .player-controls {
-    @include bp(knight) {
-      position: relative;
-      margin: auto;
-      width: $player-width;
-    }
-  }
-
-  .track-title {
-    margin: 8px 0 5px 0;
-    line-height: 1.3em;
-
-    @include bp(knight) {
-      margin-top: 0;
-    }
-  }
-
-  .show-title {
-    font-style: italic;
-    color: $light-gray;
-  }
-
-  audio {
-    width: 100%;
-    max-width: $player-width;
-    display: inline-block;
-  }
-
-  .toggle-player {
-    position: absolute;
-    top: -25px;
-    left: 0px;
-    height: 25px;
-    width: 100%;
-    background-color: #333333;
-    cursor: pointer;
-
-    span {
-      display: inline-block;
-      line-height: 25px;
-      transform: rotate(90deg);
-    }
-  }
-
+.player-controls {
   @include bp(knight) {
-    .toggle-player:hover {
-      background-color: #444;
-    }
-  }
-
-  .toggle-player-on span {
-    transform: rotate(-90deg);
+    position: relative;
+    margin: auto;
+    width: $player-width;
   }
 }
 
-/* shows */
+.track-title {
+  margin: 8px 0 5px 0;
+  line-height: 1.3em;
+
+  @include bp(knight) {
+    margin-top: 0;
+  }
+}
+
+.show-title {
+  font-style: italic;
+  color: $light-gray;
+}
+
+audio {
+  width: 100%;
+  max-width: $player-width;
+  display: inline-block;
+}
+
+.toggle-player {
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  height: 25px;
+  width: 100%;
+  background-color: #333333;
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    line-height: 25px;
+    transform: rotate(90deg);
+  }
+}
+
+@include bp(knight) {
+  .toggle-player:hover {
+    background-color: #444;
+  }
+}
+
+.toggle-player-on span {
+  transform: rotate(-90deg);
+}
+
+/*
+*   ================================================================
+*   Active & Inactive show Sections
+*
+*/
 
 .show-wrapper {
   padding: $vm-sm 20px;
@@ -269,6 +271,9 @@ h6 {
   }
 }
 
+/*  ================================
+*   Active Shows
+*/
 .active-shows {
   background-color: #fff;
   min-height: 100px;
@@ -284,16 +289,11 @@ h6 {
       float: left;
     }
   }
-
-  .active-buttons-container {
-    @include bp(knight) {
-      float: right;
-      position: relative;
-      top: 8px;
-    }
-  }
 }
 
+/*  ================================
+*   Inactive Shows
+*/
 .inactive-shows {
 
   h3 {
@@ -318,20 +318,32 @@ h6 {
   }
 }
 
+/*  ================================
+*   Show Images
+*/
 .show-container {
   display: inline-block;
   background-color: #fff;
   border: 1px solid #e3e3e3;
   margin: 5px 3px;
+  border-radius: 3px;
+}
+
+.show-container:hover {
+  @include bp(queen) {
+    border: 1px solid #b2b2b2;
+  }
 }
 
 .icon { // show image/icon
   height: 70px;
   margin: 10px;
-
   @include bp(knight) {
     height: 100px;
   }
 }
 
-
+.icon:hover {
+  @include bp(queen) {
+  }
+}
