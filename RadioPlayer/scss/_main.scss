@@ -292,10 +292,6 @@ h6 {
       top: 8px;
     }
   }
-
-  .button {
-    margin-bottom: $vm-sm;
-  }
 }
 
 .inactive-shows {
@@ -325,7 +321,7 @@ h6 {
 .show-container {
   display: inline-block;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #e3e3e3;
   margin: 5px 3px;
 }
 
