@@ -1,10 +1,9 @@
-/*
-*   toggle player interface on search focus
-*/
-
 // used to track click toggles
 var oddClick = true;
 
+/*
+*   toggle player interface on search focus
+*/
 $('.input-search').focusin(function() {
   var move = $('.player-interface').css("height");
   // move down
@@ -27,7 +26,7 @@ $('.input-search').focusin(function() {
 });
 
 /*
-*   toggle player interface on toggle arrow click
+*   toggle player interface on arrow click/touch
 */
 $('.toggle-player').click(function() {
   // rotates arrow 90 degrees
@@ -36,7 +35,7 @@ $('.toggle-player').click(function() {
   else
     $('.toggle-player').removeClass('toggle-player-on');
 
-  // move
+  // move player up or down depending on oddClick.
   var move = $('.player-interface').css("height");
   $('.player-interface').animate(
     {bottom: oddClick ? '-' + move : '0px'},

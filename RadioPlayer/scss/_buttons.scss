@@ -1,27 +1,19 @@
-/* button & input styles */
-
-.active-shows .button {
-  width: 48%;
-
-  @include bp(pawn) {
-    width: 150px;
-  }
-}
+/*  ================================================================
+*   button defaults
+*/
 
 .button {
+  border: 0;
+  outline: 0;
   padding: 5px 0;
   border-radius: 3px;
-  border: 0;
   font-size: 16px;
-  outline: 0;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   position: relative;
   font-family: 'Ubuntu', sans-serif;
-
   @include bp(pawn) {
     padding: 7px 0;
   }
-
   @include bp(knight) {
     padding: 11px 0;
   }
@@ -32,17 +24,22 @@
   border: none;
 }
 
-/*
+// applies only to 'add for me' and 'clear' buttons
+.active-shows .button {
+  width: 48%;
+  @include bp(pawn) {
+    width: 150px;
+  }
+}
+
+/*  ================================================================
 *   Add
 */
-
 .button-add {
   background-color: #5CA6BF;
-  // box-shadow: 0 3px 0 0 #478194;
   border-bottom: 3px solid #478194;
   color: #fff;
   float: left;
-
   @include bp(pawn) {
     float: none;
   }
@@ -56,7 +53,6 @@
   background-color: #569BB3;
   border-bottom: 0;
   border-top: 3px solid #478194;
-  // box-shadow:inset 0 3px 0 0 #478194;
 }
 
 .button-add[disabled="disabled"] {
@@ -64,10 +60,9 @@
   color: #DAE8ED;
   text-shadow: none;
   top: 3px;
-  // box-shadow: none;
 }
 
-/*
+/*  ================================================================
 *   Clear
 */
 
@@ -76,8 +71,6 @@
   background-color: #D65469;
   color: #fff;
   border-bottom: 3px solid #AB4354;
-  // box-shadow: 0 3px 0 0 #AB4354;
-
   @include bp(pawn) {
     float: none;
     margin-left: 6px;
@@ -92,42 +85,36 @@
   background-color: #CC5064;
   border-bottom: 0;
   border-top: 3px solid #AB4354;
-  // box-shadow:inset 0 3px 0 0 #AB4354;
 }
 
 .button-clear[disabled="disabled"] {
   background-color: #F09CA9;
   color: #FCD9DF;
-  //box-shadow: none;
   text-shadow: none;
   top: 3px;
 }
 
 
-/*
+/*  ================================================================
 *   Next
 */
-
 .button-next {
   font-size: 14px;
   padding: 5px 10px;
   margin: $vm-sm 0 0 0;
+  @include bp(knight) {
+    padding: 11px 20px;
+  }
 
   span {
     letter-spacing: -2px;
-  }
-
-  @include bp(knight) {
-    padding: 11px 20px;
   }
 }
 
 .button-next {
   background-color: $d-dark-gray;
   border-bottom: 3px solid #0D0D0D;
-  // box-shadow: 0 3px 0 0 #0D0D0D;
   color: #fff;
-
   @include bp(knight) {
     position: absolute;
     right: 0;
@@ -143,19 +130,16 @@
   background-color: $d-dark-gray;
   border-bottom: none;
   border-top: 3px solid #0D0D0D;
-  // box-shadow:inset 0 3px 0 0 #0D0D0D;
 }
 
 .button-next[disabled="disabled"] {
   background-color: #333333;
   color: #A8A8A8;
-  // box-shadow: none;
 }
 
-/*
+/*  ================================================================
 *   Input Search
 */
-
 .input-search {
   width: 100%;
   display: block;
@@ -184,11 +168,10 @@
 .input-search:focus {
   background-color: #fff;
   border: 2px solid #75C0D9;
-  //box-shadow:inset 0 0 0 2px #75C0D9;
   box-sizing: border-box;
 }
 
-// Placeholder text color browser workarounds
+// Placeholder font color browser workarounds
 .input-search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #ccc;
 }
@@ -202,9 +185,10 @@
   color: #ccc;
 }
 
-/*
-*   container needed for large-size layout
+/*  ================================================================
+*   Workarounds
 */
+// button container needed for large-size layout
 .active-buttons-container {
   @include bp(knight) {
     float: right;
@@ -213,13 +197,7 @@
   }
 }
 
-/*
-*   Funky button moving workaround on active state
-*/
-
-.active-buttons-container {
-  vertical-align: top;
-}
+// Funky button moving workaround on active state
 .active-buttons-container > button {
   vertical-align: top;
 }
