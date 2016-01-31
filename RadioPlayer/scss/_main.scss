@@ -1,25 +1,23 @@
 /* 
-    ================================================================
-    Vars 
-    ================================================================
+*   ================================================================
+*   Vars 
+*   ================================================================
 */
-
 $d-dark-gray : #242424;
 $dark-gray : #3B3B3B;
 $light-gray : #919191;
 $blue : #0C71B0;
 $light-blue : #A8D3ED;
+
 $vm-sm : 10px;
 $vm-md : 20px;
-
 $player-width: 680px;
 
 /*  
-    ================================================================
-    Styles 
-    ================================================================
+*   ================================================================
+*   Styles 
+*   ================================================================
 */
-
 .animate-enter, 
 .animate-leave
 { 
@@ -101,7 +99,6 @@ h6 {
   width: 100%;
   height: 40px;
   background-color: $dark-gray;
-
   @include bp(knight) {
     height: 55px;
   }
@@ -115,7 +112,6 @@ h6 {
     vertical-align: middle;
     font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
-
     @include bp(knight) {
       font-size: 25px;
       height: 55px;
@@ -126,7 +122,6 @@ h6 {
 
 // footer site logo
 .site-logo {
-
   h4 {
     color: #bbb;
     text-align: center;
@@ -167,7 +162,6 @@ h6 {
     margin: 0;
     color: $light-gray;
     font-size: 14px;
-
     @include bp(knight) {
       text-align: left;
       display: none;
@@ -176,7 +170,6 @@ h6 {
 
   p {
     font-size: 14px;
-
     @include bp(knight) {
       font-size: 16px;
     }
@@ -194,7 +187,6 @@ h6 {
 .track-title {
   margin: 8px 0 5px 0;
   line-height: 1.3em;
-
   @include bp(knight) {
     margin-top: 0;
   }
@@ -219,11 +211,18 @@ audio {
   width: 100%;
   background-color: #333333;
   cursor: pointer;
+  @include bp(knight) {
+    top: -35px;
+    height: 35px;
+  }
 
   span {
     display: inline-block;
     line-height: 25px;
     transform: rotate(90deg);
+    @include bp(knight) {
+      line-height: 35px;
+    }
   }
 }
 
@@ -246,24 +245,19 @@ audio {
 .show-wrapper {
   padding: $vm-sm 20px;
   text-align: center;
-
   @include bp(pawn) {
     text-align: left;
     padding: $vm-md 40px;
   }
-
   @include bp(knight) {
     padding: $vm-md 60px;
   }
-
   @include bp(queen) {
     padding: $vm-md 110px;
   }
-
   @include bp(king) {
     padding: $vm-md 180px;
   }
-
   h3 {
     @include bp(knight) {
       font-size: 24px;
@@ -280,11 +274,9 @@ audio {
 
   h3 {
     margin: $vm-sm 0px;
-
     @include bp(pawn) {
       margin: $vm-md 0px;
     }
-
     @include bp(knight) {
       float: left;
     }
@@ -298,7 +290,6 @@ audio {
 
   h3 {
     margin: $vm-sm 0px;
-
     @include bp(knight) {
       margin: $vm-md 0 40px 0;
       float: left;
@@ -309,7 +300,6 @@ audio {
     font-size: 14px;
     color: $light-gray;
     font-family: 'Roboto Condensed', sans-serif;
-
     @include bp(knight) {
       font-size: 16px;
       position: relative;
@@ -327,11 +317,15 @@ audio {
   border: 1px solid #e3e3e3;
   margin: 5px 3px;
   border-radius: 3px;
+  @include bp(queen) {
+    opacity: 0.7;
+  }
 }
 
 .show-container:hover {
   @include bp(queen) {
     border: 1px solid #b2b2b2;
+    opacity: 1;
   }
 }
 
