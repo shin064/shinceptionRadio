@@ -1,3 +1,5 @@
+To see a demo of this app, visit http://shinadachi.com/RadioPlayer
+
 # Shinception Radio #
 
 ## Sub-Heading ##
@@ -18,6 +20,3 @@
 
 ## How to Get Started ##
   Super easy. Turn it on, select your favorite shows, sit back, and enjoy!
-
-## Closing and Call to Action ##
-  Give Shinception Rad.io a try. You'll fall in love with it.
