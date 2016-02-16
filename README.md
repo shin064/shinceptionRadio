@@ -1,8 +1,6 @@
 To see a demo of this app, visit http://shinadachi.com/RadioPlayer
 
 # Shinception Radio #
-
-## Sub-Heading ##
   Radio player for the slightly lazy.
 
 ## Summary ##
@@ -13,10 +11,3 @@ To see a demo of this app, visit http://shinadachi.com/RadioPlayer
 
 ## Solution ##
   Shinception Rad.io takes out the work on the user of having to select what episode they want to listen to every time one episode finishes. The user can simply select their favorite shows in the beginning, and let the player do the work of selecting an episode to play from the assortment of the user's pre-selected favorite shows.
-
-
-## Quote from the Creator ##
-  Shinception Rad.io from revolutionize your radio-listening experience!
-
-## How to Get Started ##
-  Super easy. Turn it on, select your favorite shows, sit back, and enjoy!
