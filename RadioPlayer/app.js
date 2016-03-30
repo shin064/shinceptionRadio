@@ -15,7 +15,7 @@ $('#next').click(function(){
 var episodes = {}; //to be filled with episodes when user selects a show
 var playing = false; //toggle when an episode starts playing
 
-//this shuffle function oes NOT modify the original array.
+//this shuffle function does NOT modify the original array.
 function shuffle(arr){
 	var copy = arr.slice();
 	var build = [];
